@@ -42,8 +42,6 @@
 					return date;
 			   }
 			   var Tmp = Temperature(t,u)
-			   
-			   alert("Temperature is "+Tmp.temp+" in "+Tmp.unit);
 			});
 
 			validate = function(t){
@@ -62,7 +60,6 @@
 			Temperature = function(t,u){
 				var t1;
 				var u1;
-				
 				if(u == "F"){
 					t1 = t * (9/5) + 32;
 					u1 = "Fahrenheit";
@@ -73,8 +70,7 @@
 					t1 = t * (4/5);
 					u1 = "Kelvin";
 				}
-
-				return {"temp":t1,"unit":u1}
+				document.getElementById("result").innerHTML = "Temperature is "+t1+" in "+u1;
 			}
 		});
 	</script>
